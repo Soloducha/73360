@@ -15,7 +15,6 @@ body {
 header {
   background-color: #f0983c;
   color: black;
-  padding: 20px 0;
 }
 
 .container {
@@ -40,7 +39,7 @@ nav {
   height: auto;
 }
 
-.logoHeader p {
+.logoHeader span {
   font-size: 24px;
   font-weight: bolder;
 }
@@ -62,7 +61,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #ff3300;
+  color: #ff3300 !important;
 }
 
 /* Contenido principal */
@@ -253,12 +252,23 @@ footer {
 }
 
 .rutina-table {
+  table-layout: auto;
+  width: auto;
+}
+
+.rutina-table input {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.rutina-table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
   margin-top: 10px;
   background: #ffffff;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -300,26 +310,6 @@ footer {
   border-radius: 5px;
   background: #f7f7f7;
 }
-#dia {
-  width: 50px;
-}
-
-#ejercicio {
-  width: 350px;
-}
-
-#series {
-  width: 50px;
-}
-#repeticiones {
-  width: 100px;
-}
-#semana {
-  width: 50px;
-}
-#peso {
-  width: 100px;
-}
 
 .boton {
   background: #f0983c;
@@ -338,6 +328,40 @@ footer {
 
 .boton:hover {
   background: red;
+}
+
+@media (max-width: 600px) {
+  .rutina-table {
+    border-radius: 30px;
+  }
+
+  .rutina-table thead {
+    display: none;
+  }
+  .rutina-table tr {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+  }
+  .rutina-table td {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: none;
+    width: 100%;
+  }
+  .rutina-table td::before {
+    content: attr(data-label);
+    font-weight: lighter;
+    margin-right: 0.5rem;
+    min-width: 140px;
+    text-align: start;
+  }
+  */ .rutina-table input {
+    flex: 1;
+  }
 }
 
 /*Planes y precios*/
