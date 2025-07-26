@@ -1,0 +1,49 @@
+@use "variables";
+/* CONTACTO: */
+.contacto-form {
+  background: #e9b276;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  label {
+    font-weight: bolder;
+    color: black;
+    font-size: larger;
+  }
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background: white;
+    transition: border-color 0.2s;
+  }
+  input:focus,
+  textarea:focus {
+    border-color: red;
+    border-width: 2px;
+    outline: none;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    background: variables.$naranja;
+    color: white;
+    border: solid 2px variables.$naranja;
+    padding: 20px 0;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background 0.5s;
+  }
+  button[type="submit"]:hover {
+    background: red;
+  }
+}

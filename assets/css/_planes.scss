@@ -1,0 +1,51 @@
+/*Planes y precios*/
+@use "variables";
+
+@mixin plan-style {
+  color: variables.$naranja;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.planes-precios {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.plan {
+  @include plan-style;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px;
+  width: 400px;
+  border: 8px solid variables.$naranja;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  h2 {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      color: black;
+      font-size: 16px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+  }
+}
+.plan .precio {
+  @include plan-style;
+}

@@ -1,0 +1,127 @@
+@use "variables";
+/*Pagina Rutinas*/
+
+.rutina-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.rutina-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+  margin-bottom: 28px;
+  justify-content: center;
+  label {
+    font-weight: bold;
+  }
+  input {
+    padding: 7px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #f7f7f7;
+    font-size: 1rem;
+    margin-right: 18px;
+  }
+}
+
+.rutina-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #ffffff;
+  /* border-radius: 30px; */
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  thead {
+    background: variables.$naranja;
+  }
+  th,
+  td {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 20px;
+  }
+  th {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  tbody tr:nth-child(even) {
+    background: #f5e6d7;
+  }
+  tbody tr:nth-child(odd) {
+    background: #fff;
+  }
+  tbody tr:hover {
+    background: variables.$naranja;
+    color: white;
+  }
+  input[type="text"],
+  input[type="number"] {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f7f7f7;
+  }
+}
+.table-responsive {
+  padding: 10px;
+}
+
+.boton {
+  background: variables.$naranja;
+  color: white;
+  border: solid 2px black;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.boton:hover {
+  background: red;
+}
+
+@media (max-width: 600px) {
+  .rutina-table {
+    border-radius: 30px;
+    thead {
+      display: none;
+    }
+    tr {
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      padding: 0.5rem;
+    }
+    td {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border: none;
+      width: 100%;
+    }
+    td::before {
+      content: attr(data-label);
+      font-weight: lighter;
+      margin-right: 0.5rem;
+      min-width: 140px;
+      text-align: start;
+    }
+    input {
+      flex: 1;
+    }
+  }
+}

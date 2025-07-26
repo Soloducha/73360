@@ -1,0 +1,63 @@
+@use "variables";
+/* Pagina Servicios */
+.servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fondoServicio {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Fondo específico para cada servicio */
+.fondo1 {
+  background-image: url("../images/fondo1.png");
+}
+.fondo2 {
+  background-image: url("../images/fondo2.jpg");
+}
+.fondo3 {
+  background-image: url("../images/fondo3.jpg");
+}
+.fondo4 {
+  background-image: url("../images/fondo4.jpg");
+}
+.fondo5 {
+  background-image: url("../images/fondo5.jpg");
+}
+.fondo6 {
+  background-image: url("../images/fondo6.jpg");
+}
+.fondo7 {
+  background-image: url("../images/fondo7.jpg");
+}
+
+.servicio {
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  border: black 2px solid;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    color: variables.$naranja;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}

@@ -1,0 +1,38 @@
+@use "variables";
+@use "header";
+@use "contacto";
+@use "rutina";
+@use "servicios";
+@use "planes";
+@use "footer";
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: variables.$fondo-gris;
+}
+
+/* Contenido principal */
+main {
+  padding-top: 40px;
+  text-align: center;
+  h1 {
+    font-size: 45px;
+  }
+}
+
+main #logoGrande {
+  width: 300px;
+  height: auto;
+  filter: brightness(1);
+}
+#logoGrande:hover {
+  filter: brightness(1.75);
+}
